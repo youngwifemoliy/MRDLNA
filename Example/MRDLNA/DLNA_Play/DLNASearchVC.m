@@ -42,16 +42,6 @@
     [self.dlnaManager startSearch];
 }
 
-- (void)searchDLNAResult:(NSArray *)devicesArray{
-    NSLog(@"发现设备");
-    self.deviceArr = devicesArray;
-    [self.dlnaTable reloadData];
-}
-
-- (void)dlnaStartPlay{
-    NSLog(@"投屏成功 开始播放");
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.deviceArr.count;
 }
@@ -89,4 +79,13 @@
     }
     return _dlnaTable;
 }
+
+
+#pragma mark - 代理
+- (void)searchDLNAResult:(NSArray *)devicesArray{
+    NSLog(@"发现设备");
+    self.deviceArr = devicesArray;
+    [self.dlnaTable reloadData];
+}
+
 @end

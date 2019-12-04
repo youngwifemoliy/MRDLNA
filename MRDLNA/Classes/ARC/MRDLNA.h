@@ -12,17 +12,33 @@
 @protocol DLNADelegate <NSObject>
 
 @optional
+
 /**
  DLNA局域网搜索设备结果
  @param devicesArray <CLUPnPDevice *> 搜索到的设备
  */
 - (void)searchDLNAResult:(NSArray *)devicesArray;
 
-
-/**
- 投屏成功开始播放
- */
+/**投屏成功开始播放*/
 - (void)dlnaStartPlay;
+
+/**暂停响应*/
+- (void)upnpPauseResponse;
+
+/**停止投屏*/
+- (void)upnpStopResponse;
+
+/**跳转响应*/
+- (void)upnpSeekResponse;
+
+/**设置音量响应*/
+- (void)upnpSetVolumeResponse;
+
+/**获取音频信息*/
+- (void)upnpGetVolumeResponse:(NSString *)volume;
+
+/**获取播放进度*/
+- (void)upnpGetPositionInfoResponse:(CLUPnPAVPositionInfo *)info;
 
 @end
 

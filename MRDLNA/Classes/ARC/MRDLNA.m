@@ -3,7 +3,7 @@
 //  MRDLNA
 //
 //  Created by MccRee on 2018/5/4.
-// 你好啦啦啦
+// 
 
 #import "MRDLNA.h"
 #import "StopAction.h"
@@ -138,7 +138,9 @@
     [self.render setAVTransportURL:url];
 }
 
-#pragma mark -- 搜索协议CLUPnPDeviceDelegate回调
+#pragma mark - 协议
+
+/**搜索回调*/
 - (void)upnpSearchChangeWithResults:(NSArray<CLUPnPDevice *> *)devices{
     NSMutableArray *deviceMarr = [NSMutableArray array];
     for (CLUPnPDevice *device in devices) {
@@ -153,25 +155,100 @@
     self.dataArray = deviceMarr;
 }
 
+/**搜索错误*/
 - (void)upnpSearchErrorWithError:(NSError *)error{
-//    NSLog(@"DLNA_Error======>%@", error);
+    
 }
 
-#pragma mark - CLUPnPResponseDelegate
+#pragma mark CLUPnPResponseDelegate
+
+#pragma mark required
+
+/**设置url响应*/
 - (void)upnpSetAVTransportURIResponse{
     [self.render play];
 }
 
+/**获取播放状态*/
 - (void)upnpGetTransportInfoResponse:(CLUPnPTransportInfo *)info{
-//    NSLog(@"%@ === %@", info.currentTransportState, info.currentTransportStatus);
     if (!([info.currentTransportState isEqualToString:@"PLAYING"] || [info.currentTransportState isEqualToString:@"TRANSITIONING"])) {
         [self.render play];
     }
 }
 
+#pragma mark optional
+
+/**播放响应*/
 - (void)upnpPlayResponse{
     if ([self.delegate respondsToSelector:@selector(dlnaStartPlay)]) {
         [self.delegate dlnaStartPlay];
+    }
+}
+
+/**
+ 未定义的响应/错误
+ 
+ @param resXML  响应XML
+ @param postXML 请求的动作
+ */
+- (void)upnpUndefinedResponse:(NSString *)resXML postXML:(NSString *)postXML {
+    
+}
+
+/**暂停响应*/
+- (void)upnpPauseResponse {
+    if ([self.delegate respondsToSelector:@selector(upnpPauseResponse)]) {
+        [self.delegate upnpPauseResponse];
+    }
+}
+
+/**停止投屏*/
+- (void)upnpStopResponse {
+    if ([self.delegate respondsToSelector:@selector(upnpStopResponse)]) {
+        [self.delegate upnpStopResponse];
+    }
+}
+
+/**跳转响应*/
+- (void)upnpSeekResponse {
+    if ([self.delegate respondsToSelector:@selector(upnpSeekResponse)]) {
+        [self.delegate upnpSeekResponse];
+    }
+}
+
+/**以前的响应*/
+- (void)upnpPreviousResponse {
+    
+}
+
+/**下一个响应*/
+- (void)upnpNextResponse {
+    
+}
+
+/**设置音量响应*/
+- (void)upnpSetVolumeResponse {
+    if ([self.delegate respondsToSelector:@selector(upnpSetVolumeResponse)]) {
+        [self.delegate upnpSetVolumeResponse];
+    }
+}
+
+/**设置下一个url响应*/
+- (void)upnpSetNextAVTransportURIResponse {
+    
+}
+
+/**获取音频信息*/
+- (void)upnpGetVolumeResponse:(NSString *)volume {
+    if ([self.delegate respondsToSelector:@selector(upnpGetVolumeResponse:)]) {
+        [self.delegate upnpGetVolumeResponse:volume];
+    }
+}
+
+/**获取播放进度*/
+- (void)upnpGetPositionInfoResponse:(CLUPnPAVPositionInfo *)info {
+    if ([self.delegate respondsToSelector:@selector(upnpGetPositionInfoResponse:)]) {
+        [self.delegate upnpGetPositionInfoResponse:info];
     }
 }
 

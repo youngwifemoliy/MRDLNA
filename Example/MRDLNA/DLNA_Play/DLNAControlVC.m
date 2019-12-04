@@ -15,7 +15,7 @@
 #define W [UIScreen mainScreen].bounds.size.width
 
 
-@interface DLNAControlVC ()
+@interface DLNAControlVC ()<DLNADelegate>
 {
      BOOL _isPlaying;
 }
@@ -30,6 +30,7 @@
     [super viewDidLoad];
    
     self.dlnaManager = [MRDLNA sharedMRDLNAManager];
+    self.dlnaManager.delegate = self;
     [self.dlnaManager startDLNA];
 
      _isPlaying = YES;
@@ -84,5 +85,16 @@
     NSString *testVideo = @"http://wvideo.spriteapp.cn/video/2016/0328/56f8ec01d9bfe_wpd.mp4";
     [self.dlnaManager playTheURL:testVideo];
 }
+
+#pragma mark - 代理
+
+- (void)upnpPauseResponse {
+    NSLog(@"暂停了");
+}
+
+- (void)dlnaStartPlay{
+    NSLog(@"投屏成功 开始播放");
+}
+
 
 @end
