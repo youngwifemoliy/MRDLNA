@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MRDLNA'
-  s.version          = '0.1.1'
+  s.version          = '0.2.0'
   s.summary          = 'DLNA投屏'
 
 
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'MQL9011' => '301063915@qq.com' }
-  s.source           = { :git => 'https://github.com/MQL9011/MRDLNA.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/youngwifemoliy/MRDLNA.git', :tag => s.version.to_s }
   s.social_media_url = 'http://cocomccree.cn/'
 
   s.ios.deployment_target = '8.0'

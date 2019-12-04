@@ -229,7 +229,6 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				E7899DD10B8ADB7ACE53FE04 /* [CP] Embed Pods Frameworks */,
-				C12DF20B391ADDA7575D1D92 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,8 +247,6 @@
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				30EB5211255F4341A371288F /* [CP] Embed Pods Frameworks */,
-				904AE3DF7171E1E0F807F2DE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,7 +268,11 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = MQL9011;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 4ZHG5259CF;
+					};
 					6003F5AD195388D20070C39A = {
+						DevelopmentTeam = 4ZHG5259CF;
 						TestTargetID = 6003F589195388D20070C39A;
 					};
 				};
@@ -281,6 +282,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -319,21 +321,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		30EB5211255F4341A371288F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MRDLNA_Tests/Pods-MRDLNA_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5A6960012D94D384BD9A9543 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -370,43 +357,13 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		904AE3DF7171E1E0F807F2DE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MRDLNA_Tests/Pods-MRDLNA_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C12DF20B391ADDA7575D1D92 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MRDLNA_Example/Pods-MRDLNA_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E7899DD10B8ADB7ACE53FE04 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MRDLNA_Example/Pods-MRDLNA_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MRDLNA_Example/Pods-MRDLNA_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
 				"${BUILT_PRODUCTS_DIR}/MRDLNA/MRDLNA.framework",
 			);
@@ -417,7 +374,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MRDLNA_Example/Pods-MRDLNA_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MRDLNA_Example/Pods-MRDLNA_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -559,6 +516,7 @@
 			baseConfigurationReference = 428DBE8FD792AA40C92E9872 /* Pods-MRDLNA_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4ZHG5259CF;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MRDLNA/MRDLNA-Prefix.pch";
 				INFOPLIST_FILE = "MRDLNA/MRDLNA-Info.plist";
@@ -574,6 +532,7 @@
 			baseConfigurationReference = 472C15D1850376CB9657DAAF /* Pods-MRDLNA_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4ZHG5259CF;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MRDLNA/MRDLNA-Prefix.pch";
 				INFOPLIST_FILE = "MRDLNA/MRDLNA-Info.plist";
@@ -589,6 +548,7 @@
 			baseConfigurationReference = D7C58695D61B78E46798DEA4 /* Pods-MRDLNA_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4ZHG5259CF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -613,6 +573,7 @@
 			baseConfigurationReference = E1CB6A307D1E45F66214FCC2 /* Pods-MRDLNA_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4ZHG5259CF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

@@ -7,7 +7,7 @@
 //
 
 #import "MRViewController.h"
-#import "DLNASearchVC.h"
+#import "DLNA_Play/DLNASearchVC.h"
 
 
 @interface MRViewController ()
