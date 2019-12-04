@@ -58,7 +58,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *testUrl = @"http://223.110.239.40:6060/cntvmobile/vod/p_cntvmobile00000000000020150518/m_cntvmobile00000000000659727681";
+    NSString *testUrl = @"http://huoke-private-1254282420.cos.ap-chengdu.myqcloud.com/2019/09/16/08a6b3bd-4d2c-40e2-99c8-926eb57bb5da.mp4?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKIDCJG2e67TN6kR3mA5fDve2X0Ndnwz5mV8%26q-sign-time%3D1575279842%3B1575351842%26q-key-time%3D1575279842%3B1575351842%26q-header-list%3D%26q-url-param-list%3D%26q-signature%3Deb42fc67c0767daa74e552c408908bb66f4119e7";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.row < self.deviceArr.count) {
         CLUPnPDevice *model = self.deviceArr[indexPath.row];
