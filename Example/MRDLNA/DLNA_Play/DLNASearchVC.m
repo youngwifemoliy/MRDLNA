@@ -88,4 +88,8 @@
     [self.dlnaTable reloadData];
 }
 
+- (void)searchEnd {
+    NSLog(@"==========搜索结束");
+}
+
 @end

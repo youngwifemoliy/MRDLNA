@@ -155,6 +155,12 @@
     self.dataArray = deviceMarr;
 }
 
+- (void)upnpSearchEnd {
+    if ([self.delegate respondsToSelector:@selector(searchEnd)]) {
+          [self.delegate searchEnd];
+      }
+}
+
 /**搜索错误*/
 - (void)upnpSearchErrorWithError:(NSError *)error{
     

@@ -19,6 +19,9 @@
  */
 - (void)searchDLNAResult:(NSArray *)devicesArray;
 
+/**搜索结束*/
+- (void)searchEnd;
+
 /**投屏成功开始播放*/
 - (void)dlnaStartPlay;
 

@@ -103,10 +103,13 @@
 #pragma mark -- GCDAsyncUdpSocketDelegate --
 - (void)udpSocket:(GCDAsyncUdpSocket *)sock didSendDataWithTag:(long)tag{
     CLLog(@"发送信息成功");
-     __weak typeof (self) weakSelf = self;
+    __weak typeof (self) weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(weakSelf.searchTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         weakSelf.receiveDevice = NO;
         CLLog(@"搜索结束");
+        if ([self.delegate respondsToSelector:@selector(upnpSearchEnd)]) {
+            [self.delegate upnpSearchEnd];
+        }
     });
 }
 
