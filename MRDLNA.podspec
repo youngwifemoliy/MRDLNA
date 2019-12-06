@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MRDLNA'
-  s.version          = '0.2.3'
+  s.version          = '0.2.4'
   s.summary          = 'DLNA投屏'
 
 

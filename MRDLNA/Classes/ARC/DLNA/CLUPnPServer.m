@@ -110,8 +110,8 @@
         weakSelf.receiveDevice = NO;
         CLLog(@"搜索结束");
         dispatch_async(dispatch_get_main_queue(), ^{
-            if ([self.delegate respondsToSelector:@selector(upnpSearchEnd)]) {
-                [self.delegate upnpSearchEnd];
+            if ([weakSelf.delegate respondsToSelector:@selector(upnpSearchEnd)]) {
+                [weakSelf.delegate upnpSearchEnd];
             }
         });        
     });
