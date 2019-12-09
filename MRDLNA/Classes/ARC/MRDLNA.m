@@ -101,6 +101,14 @@
 
 
 /**
+ 获取播放进度
+ */
+- (void)getPositionInfo{
+    [self.render getPositionInfo];
+}
+
+
+/**
  设置音量
  */
 - (void)volumeChanged:(NSString *)volume{

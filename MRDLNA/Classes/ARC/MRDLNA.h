@@ -65,6 +65,8 @@
  */
 - (void)startSearch;
 
+- (void)getPositionInfo;
+
 /**
  DLNA投屏
  */

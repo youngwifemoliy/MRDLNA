@@ -58,7 +58,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *testUrl = @"http://huoke-private-1254282420.cos.ap-chengdu.myqcloud.com/2019/09/16/08a6b3bd-4d2c-40e2-99c8-926eb57bb5da.mp4?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKIDCJG2e67TN6kR3mA5fDve2X0Ndnwz5mV8%26q-sign-time%3D1575279842%3B1575351842%26q-key-time%3D1575279842%3B1575351842%26q-header-list%3D%26q-url-param-list%3D%26q-signature%3Deb42fc67c0767daa74e552c408908bb66f4119e7";
+    NSString *testUrl = @"http://wvideo.spriteapp.cn/video/2016/0328/56f8ec01d9bfe_wpd.mp4";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.row < self.deviceArr.count) {
         CLUPnPDevice *model = self.deviceArr[indexPath.row];
@@ -82,6 +82,7 @@
 
 
 #pragma mark - 代理
+
 - (void)searchDLNAResult:(NSArray *)devicesArray{
     NSLog(@"发现设备");
     self.deviceArr = devicesArray;

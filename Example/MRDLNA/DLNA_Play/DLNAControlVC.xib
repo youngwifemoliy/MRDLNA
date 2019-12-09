@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -64,7 +61,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3L3-ZU-N1i">
-                    <rect key="frame" x="154" y="111" width="66" height="30"/>
+                    <rect key="frame" x="154.5" y="111" width="66" height="30"/>
                     <state key="normal" title="播放/暂停"/>
                     <connections>
                         <action selector="playOrPause:" destination="-1" eventType="touchUpInside" id="uCE-LF-rCg"/>
@@ -75,6 +72,13 @@
                     <state key="normal" title="退出"/>
                     <connections>
                         <action selector="closeAction:" destination="-1" eventType="touchUpInside" id="buv-BO-xqu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9s-F1-VFE">
+                    <rect key="frame" x="141.5" y="157" width="92" height="30"/>
+                    <state key="normal" title="获取播放进度"/>
+                    <connections>
+                        <action selector="getjjjjj:" destination="-1" eventType="touchUpInside" id="Ax6-dq-8EC"/>
                     </connections>
                 </button>
             </subviews>
@@ -88,10 +92,12 @@
                 <constraint firstItem="E0r-8Q-ZW2" firstAttribute="trailing" secondItem="MKW-bb-6w9" secondAttribute="trailing" id="6hl-s4-T5g"/>
                 <constraint firstItem="nJj-mm-SJ8" firstAttribute="top" secondItem="MKW-bb-6w9" secondAttribute="bottom" constant="24" id="9iX-Md-6Lf"/>
                 <constraint firstItem="REF-hg-8vW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Bk3-mX-GYt"/>
+                <constraint firstItem="Y9s-F1-VFE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GdS-v2-7xC"/>
                 <constraint firstItem="3L3-ZU-N1i" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HwP-Ir-g5u"/>
                 <constraint firstItem="3L3-ZU-N1i" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-207.5" id="Xe7-sB-wYp"/>
                 <constraint firstItem="bYQ-ce-kKb" firstAttribute="top" secondItem="alH-RX-z0l" secondAttribute="bottom" constant="39" id="YC8-ql-cBK"/>
                 <constraint firstItem="MKW-bb-6w9" firstAttribute="top" secondItem="E0r-8Q-ZW2" secondAttribute="bottom" constant="31" id="bFF-qR-QkR"/>
+                <constraint firstItem="Y9s-F1-VFE" firstAttribute="top" secondItem="3L3-ZU-N1i" secondAttribute="bottom" constant="16" id="bQx-Sc-nnN"/>
                 <constraint firstItem="3L3-ZU-N1i" firstAttribute="top" secondItem="REF-hg-8vW" secondAttribute="bottom" constant="20" id="dvL-RD-MUv"/>
                 <constraint firstItem="alH-RX-z0l" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="fj5-NA-9Si"/>
                 <constraint firstItem="MKW-bb-6w9" firstAttribute="leading" secondItem="bYQ-ce-kKb" secondAttribute="trailing" constant="29" id="jDE-0l-lnd"/>

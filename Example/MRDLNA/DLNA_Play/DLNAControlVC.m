@@ -38,6 +38,9 @@
 
 #pragma mark -播放控制
 
+- (IBAction)getjjjjj:(id)sender {
+    [self.dlnaManager getPositionInfo];
+}
 /**
  退出
  */
